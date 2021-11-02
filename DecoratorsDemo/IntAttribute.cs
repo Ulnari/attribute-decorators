@@ -4,10 +4,6 @@ namespace DecoratorsDemo
     {
         private IValue<int> _value = new RootValue<int>(0);
 
-        public IntAttribute()
-        {
-        }
-        
         public int Value
         {
             get => _value.Value;
