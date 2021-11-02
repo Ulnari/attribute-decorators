@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace DecoratorsDemo
 {
-    public class DecoratorTests
+    public class ShieldDecoratorTest
     {
         private IntAttribute _attribute;
 

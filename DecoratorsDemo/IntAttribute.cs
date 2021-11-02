@@ -16,5 +16,27 @@ namespace DecoratorsDemo
             _value = decorator;
             return decorator;
         }
+
+        public bool RemoveDecorator(IDecorator<int> decorator)
+        {
+            IDecorator<int> previous = null;
+            var next = _value;
+
+            while (next is IDecorator<int> current)
+            {
+                next = current.Decorated;
+
+                if (current == decorator)
+                {
+                    if (previous != null) previous.Decorated = next;
+                    else _value = next;
+                    return true;
+                }
+
+                previous = current;
+            }
+
+            return false;
+        }
     }
 }
