@@ -23,3 +23,5 @@ x64/
 .DS_Store*
 Icon?
 
+# non-unity meta files
+DecoratorsDemo/*.meta
